@@ -1,6 +1,6 @@
 # function for preparing scib_plotting data
 scib_tab2plot <- function(
-    preprocessed_tab, label_top3 = T
+    preprocessed_tab, label_top3 = T, Image_path = "./images"
 ){
   
   # a list for collecting results
