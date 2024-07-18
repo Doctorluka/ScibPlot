@@ -63,9 +63,37 @@ scib_summary_tab <- scib_scores %>%
 # Scanorama           0.2694639        0.3222742     0.3011501    Scanorama      HVG   scaled Embedding
 
 
+preprocessed_data <- scib_preprocessing_tab(scib_summary_tab)
+# [1] "All required columns are present."
+# [1] "Values in Output are corrected."
+# [1] "Values in Scaling are corrected."
+# [1] "Values in Features are corrected."
+# [1] "Data preprocessing has been completed..."
+
+# preview
+#                   Methods Features  Scaling overall_rank bio_rank batch_rank    Output output_img Overall_Score Bio_conservation Batch_Correction
+# scANVI             scANVI      HVG unscaled          1.0      1.0        0.6 Embedding      embed     0.6398280        0.6265064        0.6598105
+# scVI                 scVI      HVG unscaled          0.9      0.9        0.7 Embedding      embed     0.6263268        0.5934588        0.6756287
+# Combat             Combat     FULL unscaled          0.8      0.6        1.0  Features       gene     0.6152273        0.5585543        0.7002369
+# CellHint         CellHint      HVG   scaled          0.7      0.7        0.8     Graph      graph     0.6141661        0.5677089        0.6838519
+# BBKNN               BBKNN      HVG unscaled          0.6      0.4        0.9     Graph      graph     0.6112060        0.5544560        0.6963309
+# FastMNN           FastMNN      HVG   scaled          0.5      0.8        0.5  Features       gene     0.6027919        0.5710095        0.6504656
+# CCA                   CCA      HVG unscaled          0.4      0.5        0.3  Features       gene     0.5920591        0.5574732        0.6439380
+# Harmony           Harmony      HVG   scaled          0.3      0.1        0.4 Embedding      embed     0.5492776        0.4822979        0.6497471
+# MIRA_feature MIRA_feature      HVG unscaled          0.2      0.2        0.2 Embedding      embed     0.5105068        0.5111988        0.5094688
+# MIRA_topic     MIRA_topic      HVG unscaled          0.1      0.3        0.1 Embedding      embed     0.4718122        0.5167739        0.4043697
+# Scanorama       Scanorama      HVG   scaled          0.0      0.0        0.0 Embedding      embed     0.3011501        0.3222742        0.2694639
 
 
 
+prepared_data_list <- scib_tab2plot(preprocessed_data, label_top3 = T, Image_path = "./images")
+# [1] "Return a list object containing plot_data."
+# Warning message:
+# Setting row names on a tibble is deprecated.
+
+
+plot <- scib_nice_plot(plot_data = prepared_data_list, label_top3 = T)
+# The final plot is showed in README.
 
 
 
