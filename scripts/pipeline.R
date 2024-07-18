@@ -39,7 +39,28 @@ scib_scores <- scib_calculate_scores(scib_bm_table)
 # MIRA_topic   ... 0.54447549 0.63484822        0.4043697        0.5167739     0.4718122
 # Scanorama    ... 0.08817273 0.03976692        0.2694639        0.3222742     0.3011501
 
+scib_summary_tab <- scib_scores %>% 
+  dplyr::select(Batch_Correction, Bio_conservation, Overall_Score) %>% 
+  mutate(Methods = rownames(.)) %>% 
+  mutate(Features = c("HVG","HVG","FULL", rep("HVG", 8))) %>% 
+  mutate(Scaling = c("unscaled", "unscaled", "unscaled", "scaled", "unscaled", "scaled", 
+                     "unscaled", "scaled", "unscaled", "unscaled", "scaled")) %>% 
+  mutate(Output = c("Embedding", "Embedding", "Features", "Graph", "Graph","Features", 
+                    "Features", "Embedding", "Embedding", "Embedding", "Embedding"))
 
+# preview
+#              Batch_Correction Bio_conservation Overall_Score      Methods Features  Scaling    Output
+# scANVI              0.6598105        0.6265064     0.6398280       scANVI      HVG unscaled Embedding
+# scVI                0.6756287        0.5934588     0.6263268         scVI      HVG unscaled Embedding
+# Combat              0.7002369        0.5585543     0.6152273       Combat     FULL unscaled  Features
+# CellHint            0.6838519        0.5677089     0.6141661     CellHint      HVG   scaled     Graph
+# BBKNN               0.6963309        0.5544560     0.6112060        BBKNN      HVG unscaled     Graph
+# FastMNN             0.6504656        0.5710095     0.6027919      FastMNN      HVG   scaled  Features
+# CCA                 0.6439380        0.5574732     0.5920591          CCA      HVG unscaled  Features
+# Harmony             0.6497471        0.4822979     0.5492776      Harmony      HVG   scaled Embedding
+# MIRA_feature        0.5094688        0.5111988     0.5105068 MIRA_feature      HVG unscaled Embedding
+# MIRA_topic          0.4043697        0.5167739     0.4718122   MIRA_topic      HVG unscaled Embedding
+# Scanorama           0.2694639        0.3222742     0.3011501    Scanorama      HVG   scaled Embedding
 
 
 
