@@ -28,5 +28,5 @@
 Note: When using this code, please comply with related laws and respect the rights of the original author.
 
 ### Presentation of the final drawing
-
+![scib_plot](https://github.com/Doctorluka/ScibPlot/blob/main/images/scib_nice_plot.png)
 
