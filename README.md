@@ -3,7 +3,7 @@
 - Processing the output of benchmarking of single-cell sequencing integration methods (SCIB).
 - Producing nice plot.
 
-**Four main functions includes:**
+**The main functions includes:**
 - `scib_calculate_scores` calulates batch correction, bio conservation and overscore following the weighting algorithm proposed by SCIB.
   - The input data should have row names as methods and column names as parameters for SCIB calculations.
 - `scib_score2tab` produces and checks necessary parameters for plotting. 
