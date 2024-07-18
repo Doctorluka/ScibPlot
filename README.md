@@ -26,8 +26,8 @@
 
 ### Code Declaration
 1. This project was first released on July 8, 2024, published on GitHub. It is intended for research purposes only and strictly prohibits commercial use.
-2. The main code is directly contributed by the HLCA paper. It can be viewed here: [HLCA_reproducibility](https://github.com/LungCellAtlas/HLCA_reproducibility). Importantly, this is not original work, it's just a reorganization and adjustment of existing work.
-3. The ATAC part about the source code is removed here, please read the source code if needed.
+2. The main code is directly contributed by the HLCA paper. It can be viewed here: [HLCA_reproducibility](https://github.com/LungCellAtlas/HLCA_reproducibility). Importantly, this is not original work, and it's just a reorganization and adjustment of existing work.
+3. The ATAC part about the source code is removed here. Please read the source code if needed.
 4. Thanks to the GZDLab team for their support.
 
 Note: When using this code, please comply with related laws and respect the rights of the original author.
