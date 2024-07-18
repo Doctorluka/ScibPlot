@@ -486,6 +486,7 @@ scib_tab2plot <- function(
   plot_data[['text_data']] <- text_data
   plot_data[['image_data']] <- image_data
   plot_data[['arrow_data']] <- arrow_data
-  
+                                        
+  print("Return a list object containing plot_data.")
   return(plot_data)
 }
