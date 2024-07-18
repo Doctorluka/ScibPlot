@@ -39,6 +39,8 @@ scib_scores <- scib_calculate_scores(scib_bm_table)
 # MIRA_topic   ... 0.54447549 0.63484822        0.4043697        0.5167739     0.4718122
 # Scanorama    ... 0.08817273 0.03976692        0.2694639        0.3222742     0.3011501
 
+
+# Prepare these data manually
 scib_summary_tab <- scib_scores %>% 
   dplyr::select(Batch_Correction, Bio_conservation, Overall_Score) %>% 
   mutate(Methods = rownames(.)) %>% 
