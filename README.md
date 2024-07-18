@@ -1,8 +1,9 @@
 # ScibPlot
-**Codes for:**
+### Codes for:
 - Processing the output of benchmarking of single-cell sequencing integration methods (SCIB).
 - Producing nice plot.
 
+### Functions description
 **The main functions includes:**
 - `scib_calculate_scores` calulates batch correction, bio conservation and overscore following the weighting algorithm proposed by SCIB.
   - The input data should have row names as methods and column names as parameters for SCIB calculations.
@@ -20,6 +21,9 @@
 - `add_column_if_missing`
 - `check_column_value`
 
+### Presentation of the final drawing
+![scib_plot](https://github.com/Doctorluka/ScibPlot/blob/main/images/scib_nice_plot.png)
+
 ### Code Declaration
 1. This project was first released on July 8, 2024, published on GitHub. It is intended for research purposes only and strictly prohibits commercial use.
 2. The main code is directly contributed by the HLCA paper. It can be viewed here: [HLCA_reproducibility](https://github.com/LungCellAtlas/HLCA_reproducibility). Importantly, this is not original work, it's just a reorganization and adjustment of existing work.
@@ -28,6 +32,4 @@
 
 Note: When using this code, please comply with related laws and respect the rights of the original author.
 
-### Presentation of the final drawing
-![scib_plot](https://github.com/Doctorluka/ScibPlot/blob/main/images/scib_nice_plot.png)
 
