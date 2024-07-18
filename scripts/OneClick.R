@@ -1,7 +1,7 @@
 # example for scib-functions
 rm(list = ls())
 
-source("utils/scib/scib_utils.R")
+source("utils/scib_utils.R")
 
 # input: raw output from scib
 scib_bm_table <- read.csv("data/13_scib_metrics_concat2.csv", row.names = 1)
