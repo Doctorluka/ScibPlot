@@ -1,6 +1,13 @@
 # set your work dir
 set.wd("your/path/")
 
+# import functions
+source("utils/internal_functions.R")
+source("utils/scib_calculate_scores.R")
+source("utils/scib_score2tab.R")
+source("utils/scib_tab2plot.R")
+source("utils/scib_NicePlot.R")
+
 # step 1: calculate scores from scib output
 scib_bm_table <- read.csv("data/scib_metrics_output.csv", row.names = 1)
 scib_bm_table <- t(scib_bm_table) %>% as.data.frame()
