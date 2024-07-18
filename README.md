@@ -8,7 +8,7 @@
 - `scib_calculate_scores` calulates batch correction, bio conservation and overscore following the weighting algorithm proposed by SCIB.
   - The input data should have row names as methods and column names as parameters for SCIB calculations.
 - `scib_score2tab` produces and checks necessary parameters for plotting. 
-  - You need to manually add some necessary information to the `scib_calculate_scores` output file: 
+  You need to manually add some necessary information to the `scib_calculate_scores` output file. Once this is done, pass this table as input to scib_score2tab: 
   - **Methods:** usually the row name of the SCIB result, like "scVI" and "Harmony".
   - **Features:** "HVG" or "FULL", which depends on the corresponding integration method and calculation process.
   - **Scaling:** "scaled" or "unscaled", which depends on the content of the matrix needed for the integration algorithm. For example, scVI requires the input of the raw counts matrix (labeled "unscaled").
