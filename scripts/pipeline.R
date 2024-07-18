@@ -4,7 +4,7 @@ set.wd("your/path/")
 # step 1: calculate scores from scib output
 scib_bm_table <- read.csv("data/scib_metrics_output.csv", row.names = 1)
 scib_bm_table <- t(scib_bm_table) %>% as.data.frame()
-
+ 
 # preview
 #                                  CCA    Harmony       scVI     scANVI     Combat  Scanorama    FastMNN MIRA_feature MIRA_topic      BBKNN   CellHint
 # NMI_cluster/label         0.68113424 0.40519090 0.70671790 0.78339236 0.67791204 0.07367235 0.70544284   0.64829393  0.6195890 0.63326321 0.63792718
