@@ -1,6 +1,7 @@
 # ScibPlot
 ### Codes for:
-- Processing the output of benchmarking of single-cell sequencing integration methods (SCIB).
+- How to generate benchmarking results for different integration methods on KNN-graph level by single-cell sequencing integration methods (SCIB). 
+- Processing the output of benchmarking of SCIB.
 - Producing nice plot.
 
 ### Functions description
